@@ -1,0 +1,28 @@
+<!--***** CONTENT *****-->
+<div class="row mt-2" id="card-prof">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card hovercard">
+            <div class="cardheader"></div>
+            <div class="avatar">
+                <img alt="" src="assets/img/avatar-1.jpg" class="img-fluid">
+            </div>
+            <div class="info">
+                <div class="title">
+                    <a>{{name}}</a>
+                </div>
+                <div class="desc">{{email}}</div>
+                <hr>
+            </div>
+            <nav class="nav text-center prof-nav">
+                <ul class="list-unstyled ">
+                    <li><a>Puesto</a></li>
+                    <li><a>Unidad</a></li>
+                    <li *ngIf="role === 'REG_USER'">Usuario</li>
+                    <li *ngIf="role === 'REG_ADMIN'">Administrador</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

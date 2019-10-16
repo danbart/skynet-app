@@ -1,0 +1,62 @@
+<!--***** CONTENT *****-->
+<div class="row">
+
+    <!--***** USER INFO *****-->
+    <div class="col-md-12">
+        <div class="card form" id="form1">
+            <div class="card-header">
+                <h3><i class="fa fa-user-circle"></i> Registrar Usuario</h3>
+            </div>
+            <br>
+            <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" class="form-control" ngModel name="name" id="name" placeholder="Ingrese Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electronico</label>
+                            <input type="email" class="form-control" ngModel name="email" id="email" placeholder="Ingrese Email" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="user">usuario</label>
+                            <input type="text" class="form-control" ngModel name="user" id="user" placeholder="Usuario" required>
+                        </div>
+
+                        <div class="form-group has-success">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" ngModel name="password" id="password" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="role">Tipo de Usuario</label>
+                            <select class="form-control" id="role" ngModel name="role" required>
+                                <option value="">Seleccione un Rol</option>
+                                <option value="REG_USER">Usuario</option>
+                                <option value="REG_ADMIN">Administrador</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="avatarImg">Imagen</label>
+                            <input type="file" class="form-control-file" ngModel name="avatarImg" id="avatarImg" aria-describedby="fileHelp">
+                        </div> -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Estado</label>
+                            <br>
+                            <button (click)="estado=false" *ngIf="estado" type="button" class="btn btn-primary btn-block">Activo</button>
+                            <button (click)="estado=true" *ngIf="!estado" type="button" class="btn btn-warning btn-block">Inactivo</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-general btn-blue mr-2" [disabled]="!f.valid">Submit</button>
+                <button type="reset" class="btn btn-general btn-white">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<!--====================================================
+                        PAGE CONTENT
+======================================================-->
+
+<!--***** SIDE NAVBAR *****-->
+<nav class="side-navbar">
+    <div class="sidebar-header d-flex align-items-center">
+        <div class="avatar"><img src="assets/img/avatar-1.jpg" class="img-fluid rounded-circle"></div>
+        <div class="title">
+            <h1 class="h4">{{name}}</h1>
+            <span *ngIf="estado===true && estado != null">Activo <i class="fa fa-toggle-on" style="color: #4BCC1F"></i></span>
+            <span *ngIf="estado===false && estado != null">Inactivo  <i class="fa fa-toggle-on" style="color: #999999"></i></span>
+        </div>
+    </div>
+    <hr>
+    <!-- Sidebar Navidation Menus-->
+    <ul class="list-unstyled">
+        <li class="active"> <a routerLink="/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li>
+            <a href="#regis" aria-expanded="false" data-toggle="collapse">
+                <i class="fa fa-archive"></i>Registros </a>
+            <ul id="regis" class="collapse list-unstyled">
+                <li><a>Ingresos</a></li>
+                <li><a>Asignar Caso</a></li>
+                <li><a>Asignar Documento</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#administrator" aria-expanded="false" data-toggle="collapse">
+                <i class="fa fa-user"></i>Administración </a>
+            <ul id="administrator" class="collapse list-unstyled">
+                <li><a routerLink="/admin/usuers">Usuarios</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

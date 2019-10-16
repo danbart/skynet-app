@@ -1,0 +1,9 @@
+.card.form form {
+    padding: 20px;
+}
+
+h4.reg-address {
+    padding-bottom: 5px;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+}
