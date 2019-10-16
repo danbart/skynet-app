@@ -5,6 +5,35 @@
                 <h3><i class="fa fa-user-circle-o"></i> Lista de Usuarios</h3>
             </div>
             <br>
+
+            <div class="table-responsive text-nowrap" *ngIf="users.length > 0">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Puesto</th>
+                            <th scope="col">Unidad</th>
+                            <th scope="col">Tipo de Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr *ngFor="let usuario of users; let i = index">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{usuario.name}}</td>
+                            <td>{{usuario.email}}</td>
+                            <td>{{usuario.puesto}}</td>
+                            <td>{{usuario.unidad}}</td>
+                            <td *ngIf="usuario.role === 'REG_USER'">Usuario</td>
+                            <td *ngIf="usuario.role === 'REG_ADMIN'">Administrador</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive text-nowrap" *ngIf="users.length < 1">
+                <div class="alert alert-danger" role="alert">No se encontraron usuarios</div>
+            </div>
         </div>
     </div>
 </div>

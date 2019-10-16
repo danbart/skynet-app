@@ -23,15 +23,15 @@ export class UserComponent implements OnInit {
   constructor(  private authService: AuthService, private store: Store<AppState> ) { }
 
   ngOnInit() {
-    this.subscription = this.store.select('auth').pipe(
-      filter( auth => auth.user != null)
-    ).subscribe( auth => {
-      this.name = auth.user.name;
-      this.email = auth.user.email;
-      this.estado = auth.user.estado;
-      this.role = auth.user.role;
-      this.uid = auth.user.uid;
-    });
+    // this.subscription = this.store.select('auth').pipe(
+    //   filter( auth => auth.user != null)
+    // ).subscribe( auth => {
+    //   this.name = auth.user.name;
+    //   this.email = auth.user.email;
+    //   this.estado = auth.user.estado;
+    //   this.role = auth.user.role;
+    //   this.uid = auth.user.uid;
+    // });
   }
 
 }

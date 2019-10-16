@@ -44,3 +44,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     background: #fff;
     border-bottom: 4px solid #2196f3;
 }
+
+@media screen and (max-width: 600px) {
+    .contact-h-cont {
+        width: 300px;
+    }
+}

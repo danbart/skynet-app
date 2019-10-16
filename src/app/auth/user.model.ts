@@ -2,20 +2,28 @@
 
 export class Usuario {
 
-    public name: string;
-    public uid: string;
-    public role: string;
-    public estado: boolean;
-    public avatarImg: string;
+    public id: string;
+    public dpi: string;
+    public nombre: string;
+    public apellido: string;
+    public fechaNacimiento: string;
+    public sexo?: string;
     public email: string;
+    public userRole: string;
+    public apiToken?: string;
+    public estado: string;
 
     constructor(obj: DataOBj) {
-        this.name = obj && obj.name || null;
+        this.id = obj && obj.id || null;
+        this.dpi = obj && obj.dpi || null;
+        this.nombre = obj && obj.nombre || null;
+        this.apellido = obj && obj.apellido || null;
+        this.fechaNacimiento = obj && obj.fechaNacimiento || null;
+        this.sexo = obj && obj.sexo || null;
         this.email = obj && obj.email || null;
-        this.uid = obj && obj.uid || null;
-        this.role = obj && obj.role || null;
-        this.estado = obj && obj.estado || false;
-        this.avatarImg = obj && obj.avatarImg || null;
+        this.userRole = obj && obj.userRole || null;
+        this.apiToken = obj && obj.apiToken || null;
+        this.estado = obj && obj.estado || null;
     }
 
 }
@@ -23,10 +31,14 @@ export class Usuario {
 // Se crea la interfaz para definir el tipo de objetos
 
 interface DataOBj {
-    name: string;
-    uid: string;
-    role: string;
-    estado: boolean;
-    avatarImg: string;
+    id: string;
+    dpi: string;
+    nombre: string;
+    apellido: string;
+    fechaNacimiento: string;
+    sexo?: string;
     email: string;
+    userRole: string;
+    apiToken?: string;
+    estado: string;
 }

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 // Envirment
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 // Redux
 import { StoreModule } from '@ngrx/store';
@@ -34,6 +35,7 @@ import { RegisterComponent } from './auth/register/register.component';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

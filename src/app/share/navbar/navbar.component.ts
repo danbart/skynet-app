@@ -15,8 +15,9 @@ import { filter } from 'rxjs/operators';
 export class NavbarComponent implements OnInit, OnDestroy {
 
   name: string;
+  apellido: string;
   email: string;
-  estado: boolean;
+  estado: string;
 
   subscription: Subscription = new Subscription();
 
@@ -26,7 +27,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.subscription = this.store.select('auth').pipe(
       filter( auth => auth.user != null)
     ).subscribe( auth => {
-      this.name = auth.user.name;
+      this.name = auth.user.nombre;
+      this.apellido = auth.user.apellido;
       this.email = auth.user.email;
       this.estado = auth.user.estado;
     });

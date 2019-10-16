@@ -13,7 +13,8 @@ import { filter } from 'rxjs/operators';
 export class SlidebarComponent implements OnInit, OnDestroy {
 
   name: string;
-  estado: boolean;
+  apellido: string;
+  estado: string;
 
   subscription: Subscription = new Subscription();
 
@@ -23,7 +24,8 @@ export class SlidebarComponent implements OnInit, OnDestroy {
     this.subscription = this.store.select('auth').pipe(
       filter( auth => auth.user != null)
     ).subscribe( auth => {
-      this.name = auth.user.name;
+      this.name = auth.user.nombre;
+      this.apellido = auth.user.apellido;
       this.estado = auth.user.estado;
     });
   }
